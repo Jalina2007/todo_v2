@@ -1,0 +1,12 @@
+[package]
+org = "jalina"
+name = "todo_v2"
+version = "0.1.0"
+distribution = "2201.13.4"
+
+[build-options]
+observabilityIncluded = true
+
+[dependencies]
+"ballerinax/mysql" = "1.14.0"
+"ballerinax/mysql.driver" = "1.14.0"
