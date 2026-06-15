@@ -9,6 +9,7 @@ configurable int dbPort = 3306;
 configurable string dbUser = "root";
 configurable string dbPassword = ?;
 configurable string dbName = "tododb";
+configurable int serverPort = 9090;
 
 // Asgardeo (WSO2) token validation settings.
 // issuer:   https://api.asgardeo.io/t/<org>/oauth2/token
@@ -46,7 +47,7 @@ type User record {|
         allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
     }
 }
-service /api on new http:Listener(9090) {
+service /api on new http:Listener(serverPort) {
 
     resource function get todos(http:Request req) returns Todo[]|http:Unauthorized|error {
         string|error sub = extractSub(req);
