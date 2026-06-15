@@ -1,0 +1,4 @@
+dbPassword = "db_password"
+jwtIssuer = "https://api.asgardeo.io/t/<asgardeo_org>/oauth2/token"
+jwtAudience = "<ClientID>"
+jwksUrl = "https://api.asgardeo.io/t/<asgardeo_org>/oauth2/jwks"
